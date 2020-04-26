@@ -12,20 +12,34 @@
 </head>
 <body>
 <div id="app" class="container">
-    <button class="btn btn-primary mt-5">NOUVELLE PARTIE</button>
+    <button class="btn btn-primary mt-5" @click="newGame">NOUVELLE PARTIE</button>
     <hr>
-    ** nous afficherons ici le score **
+    <h4>Score : {{ score }}</h4>
     <hr>
     <div>
-        <span class="carre"></span>
-        <span class="carre"></span>
+        <span class="carre" @click="selectSquare('topLeft')" :class="{ blue: topLeft }"></span>
+        <span class="carre" @click="selectSquare('topRight')"  :class="{ red: topRight }"></span>
     </div>
     <div>
-        <span class="carre"></span>
-        <span class="carre"></span>
+        <span class="carre" @click="selectSquare('botLeft')"  :class="{ green: botLeft }"></span>
+        <span class="carre" @click="selectSquare('botRight')"  :class="{ yellow: botRight }"></span>
     </div>
 </div>
-
 <script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
